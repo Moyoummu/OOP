@@ -1,3 +1,4 @@
+#pragma once
 #include "station.h"
 #include <vector>
 
