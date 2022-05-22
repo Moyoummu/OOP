@@ -1,0 +1,2 @@
+all:
+	g++ 2test.cpp transfer.cpp station.cpp stretch.cpp -o 2test
