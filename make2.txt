@@ -1,2 +1,2 @@
 all:
-	g++ 2test.cpp transfer.cpp station.cpp stretch.cpp line.cpp -o 2test
+	g++ 2test.cpp transfer.cpp station.cpp stretch.cpp line.cpp graph.cpp -o 2test

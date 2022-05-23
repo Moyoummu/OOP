@@ -11,6 +11,7 @@ void line::add_station_stretch(station* node, int t_min_, int t_max_){
     ++number_stat; 
 }
 void line::add_first_station(station* node){
+    if (number_stat != 0){ std::cout << "use other method!\n"; return;}
     Line.push_back(node);
     ++number_stat;
 }
