@@ -1,5 +1,6 @@
 #include<cstring>
 #include "extern.h"
+#include <iostream>
 
 const int& station::get_id() const { return id; }
 const std::string& station::get_name() const { return name; }
@@ -15,7 +16,16 @@ bool station::operator ==(const station &rhs) const{ return this->get_id() == rh
 
 extern "C"{
     station *create_station(int id_, char* name_, double trf_){
-        return new station(id_, name_, trf_);
+        try
+        {
+            if (trf_ > 0)
+                return new station(id_, name_, trf_);
+            else
+                throw(trf_);
+        }    
+        catch(double traffic){
+            return nullptr;
+        }  
     }
 
     void destroy_station(station *p){
